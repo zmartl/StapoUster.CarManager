@@ -1,0 +1,6 @@
+C:\Development\CarManager\CarManager.Shared\bin\Debug\CarManager.Shared.dll
+C:\Development\CarManager\CarManager.Shared\bin\Debug\CarManager.Shared.pdb
+C:\Development\CarManager\CarManager.Shared\bin\Debug\AutoMapper.dll
+C:\Development\CarManager\CarManager.Shared\bin\Debug\AutoMapper.xml
+C:\Development\CarManager\CarManager.Shared\obj\Debug\CarManager.Shared.dll
+C:\Development\CarManager\CarManager.Shared\obj\Debug\CarManager.Shared.pdb

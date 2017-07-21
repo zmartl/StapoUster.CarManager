@@ -1,4 +1,0 @@
-C:\Development\CarManager\CarManager.Shared\bin\Debug\netstandard1.4\CarManager.Shared.deps.json
-C:\Development\CarManager\CarManager.Shared\bin\Debug\netstandard1.4\CarManager.Shared.dll
-C:\Development\CarManager\CarManager.Shared\obj\Debug\netstandard1.4\CarManager.Shared.csprojResolveAssemblyReference.cache
-C:\Development\CarManager\CarManager.Shared\obj\Debug\netstandard1.4\CarManager.Shared.AssemblyInfo.cs
