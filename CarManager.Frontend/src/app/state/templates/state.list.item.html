@@ -1,0 +1,31 @@
+﻿<ng-container *ngIf="!isEditMode">
+  <td>
+    <span>{{item.name}}</span>
+  </td>
+  <td>
+    <toggle-indicator [val]="!item.isDeleted"></toggle-indicator>
+  </td>
+  <td *ngIf="!item.isDeleted">
+    <a (click)="setEdit()" mdTooltip="{{'dialogs.change' | translate}}"><i class="fa fa-pencil"></i></a>
+    <a (click)="toggleActive()" mdTooltip="{{'deactivate' | translate}}"><i class="fa fa-ban"></i></a>
+    <a (click)="delete()" mdTooltip="{{'dialogs.delete.name' | translate}}"><i class="fa fa-trash-o"></i></a>
+  </td>
+  <td *ngIf="item.isDeleted">
+    <a (click)="toggleActive()" mdTooltip="{{'activate' | translate}}"><i class="fa fa-reply"></i></a>
+  </td>
+</ng-container>
+  <ng-container *ngIf="isEditMode">
+    <td>
+      <form #form="ngForm" novalidate>
+        <input type="text" class="form-control col-sm-12" [(ngModel)]="item.name" name="name" [required]="true" />
+      </form>
+    </td>
+    <td>
+      <toggle-indicator [val]="!item.isDeleted"></toggle-indicator>
+    </td>
+
+    <td class="text-right">
+      <a (click)="resetEdit()" mdTooltip="{{'dialogs.back' | translate}}"><i class="fa" [ngClass]="{ 'fa-pencil': !isEditMode, 'fa-undo': isEditMode }"></i></a>
+      <button type="button" class="btn btn-link" (click)="update()" [disabled]="!canSave(form)" mdTooltip="{{'dialogs.save' | translate}}"><i class="fa fa-floppy-o"></i></button>
+    </td>
+  </ng-container>

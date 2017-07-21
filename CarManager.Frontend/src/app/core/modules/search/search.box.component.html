@@ -1,0 +1,6 @@
+﻿<md-input-container class="search-input">
+  <input mdInput type="search" placeholder="{{ 'additional.search' | translate }}{{ searchForTranslation | translate }}" [(ngModel)]="searchText" (keyup.enter)="search()">
+</md-input-container>
+<div class="search-btn">
+  <a md-mini-fab [color]="'primary'" (click)="search()"><i class="fa fa-search"></i></a>
+</div>

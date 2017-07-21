@@ -1,0 +1,6 @@
+﻿<h1 md-dialog-title>{{ 'dialogs.delete.name' | translate }}</h1>
+<div md-dialog-content>{{ 'dialogs.delete.text' | translate }}</div>
+<div md-dialog-actions>
+    <button md-button (click)="dialogRef.close(false)">{{ 'dialogs.cancel' | translate }}</button>
+    <button md-raised-button [color]="'warn'" (click)="dialogRef.close(true)">{{ 'dialogs.delete.name' | translate }}</button>
+</div>

@@ -1,0 +1,19 @@
+﻿<div class="row">
+    <div class="table-responsive col-sm-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th class="col-sm-9">{{ 'name' | translate }}</th>                    
+                    <th class="col-sm-2">{{ 'status' | translate }}</th>
+                    <th class="col-sm-1">{{ 'actions' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr item-definition-list-item *ngFor="let item of items" [item]="item"></tr>
+                <tr *ngIf="items.length === 0">
+                    <td colspan="5"><strong>{{'dialogs.noResult' | translate}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

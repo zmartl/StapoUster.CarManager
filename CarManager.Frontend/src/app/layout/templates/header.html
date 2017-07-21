@@ -1,0 +1,58 @@
+﻿<div class="container-fluid zrh-header">
+    <ng2-slim-loading-bar [color]="'#00549F'"></ng2-slim-loading-bar>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a ui-sref="dashboard" class="navbar-brand">
+                <img class="zrhLogo img-responsive" src="assets/images/zrh_logo.png">
+            </a>
+        </div>
+
+        <div class="navbar-top" id="navbar-top">
+            <div id="contactBox" class="contact-box hidden-xs" *ngIf="currentUser">
+                <div class="logged-user">
+                    <a target="_blank" href="http://intranet/my/Person.aspx?accountname=zrh\{{currentUser.userId}}">
+                        <span class="logged-user__thumb">
+                            <img *ngIf="currentUser.pictureUrl !== ''" class="image logged-user__image" alt="{{ currentUser.displayName }}" title="{{ currentUser.displayName }}" [src]="currentUser.pictureUrl" onError="this.src='assets/images/intro.png'" />
+                        </span>
+                        <span class="logged-user__name-number">
+                            {{ currentUser.fullDisplayName }}
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <ul class="help-box nav navbar-nav navbar-right" style="margin: 0 60px 0 0">
+                <li class="languageSelector">
+                    <div>
+                        <select #langSelect (change)="translate.use(langSelect.value)">
+                            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+                        </select>
+                    </div>
+                </li>
+                <!--<li data-toggle="tooltip" data-placement="bottom" title="{{ 'supportQuestions' | translate }}">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-question-circle"></i></a>
+                    <div class="dropdown-menu zrh-infobox" role="menu">
+                        <h2>{{ 'csd' | translate }}</h2>
+                        <div>
+                            <i class="fa fa-phone"></i>&nbsp; +41 43 816 73 00
+                        </div>
+                        <div>
+                            <i class="fa fa-envelope-o"></i>&nbsp; <a href="mailto:csd@zurich-airport.com">csd@zurich-airport.com</a>
+                        </div>
+                    </div>
+                </li>-->
+                <!--<li data-toggle="tooltip" data-placement="bottom" title="{{ 'links' | translate }}">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-book"></i></a>
+                    <div class="dropdown-menu zrh-infobox" role="menu">
+                        <h2>{{ 'links' | translate }}</h2>
+                        <div>
+                            <i class="fa fa-file-text-o"></i>&nbsp; <a target="_blank" href="http://dms/livelink/llisapi.dll/open/23057825">{{ 'operatingInstructions' | translate }}</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-file-text-o"></i>&nbsp; <a target="_blank" href="http://dms/livelink/llisapi.dll/open/23030695">{{ 'csdDocumentation' | translate }}</a>
+                        </div>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
+</div>

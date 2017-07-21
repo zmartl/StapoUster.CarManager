@@ -1,0 +1,6 @@
+﻿<h1 md-dialog-title><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i>&nbsp;{{ 'dialogs.unsavedChanges.title' | translate }}</h1>
+<div md-dialog-content>{{ 'dialogs.unsavedChanges.text' | translate }}</div>
+<div md-dialog-actions>
+    <button md-button (click)="dialogRef.close(false)">{{ 'dialogs.no' | translate }}</button>
+    <button md-raised-button [color]="'warn'" (click)="dialogRef.close(true)">{{ 'dialogs.yes' | translate }}</button>
+</div>

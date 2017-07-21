@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <div class="error-template">
+                <h1 class="text-danger">
+                    <i class="fa fa-2x fa-exclamation"></i>
+                </h1>
+                <h2>
+                    {{ 'errorResponse.404Title' | translate}}
+                </h2>
+                <div class="error-details">
+                    {{ 'errorResponse.404Message' | translate}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-15">
+        <div class="text-center">
+            <a class="btn btn-default" (click)="goBack()">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> {{ 'dialogs.back' | translate }}
+            </a>
+        </div>
+    </div>
+</div>

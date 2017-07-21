@@ -1,0 +1,20 @@
+﻿<div *ngIf="item">
+  <div class="row">
+    <div class="col-md-12 col-lg-10 col-lg-offset-1">
+      <h1 *ngIf="!isEditMode">{{ 'itemDefinition' | translate }}{{ 'additional.add' | translate }}</h1>
+      <h1 *ngIf="isEditMode">{{ 'itemDefinition' | translate }}{{ 'additional.edit' | translate }}</h1>
+      <form #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="name">{{ 'name' | translate }}</label>
+          <input type="text" class="form-control" [(ngModel)]="item.name" name="name" id="name" placeholder="{{ 'name' | translate }}{{ 'additional.add' | translate }}" required>
+        </div>
+        <md-slide-toggle [checked]="item.isDeleted" color="warn" (change)="changeActiveState($event)">
+          <div *ngIf="!item.isDeleted">{{ 'isActive' | translate }}</div>
+          <div *ngIf="item.isDeleted">{{ 'isInactive' | translate }}</div>
+        </md-slide-toggle>
+      </form>
+    </div>
+  </div>
+
+  <item-definition-add-menu (saveClicked)="save()" [isValid]="f.valid"></item-definition-add-menu>
+</div>
