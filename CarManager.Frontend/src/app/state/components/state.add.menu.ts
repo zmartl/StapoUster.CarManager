@@ -2,10 +2,10 @@
 import { Location } from '@angular/common';
 
 @Component({
-    selector: 'item-definition-add-menu',
-    templateUrl: '../templates/item.add.menu.html'
+    selector: 'state-add-menu',
+    templateUrl: '../templates/state.add.menu.html'
 })
-export class ItemAddMenu {
+export class StateAddMenu {
     @Input() isValid: boolean;
     @Output() saveClicked = new EventEmitter();
 

@@ -2,9 +2,9 @@
 import { TranslateService } from 'ng2-translate';
 
 @Component({
-    selector: 'item-definition-menu',
-    templateUrl: '../templates/item.menu.html'
+    selector: 'state-menu',
+    templateUrl: '../templates/state.menu.html'
 })
-export class ItemMenu {
+export class StateMenu {
     constructor(private translate: TranslateService) { }
 }

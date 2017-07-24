@@ -4,35 +4,36 @@ import { Response } from '@angular/http';
 import { EmitterService } from "../../core/services/emitter.service";
 import { CommonService } from "../../core/services/common.service";
 
-import { ItemService } from '../../shared/services/item.service';
-import { ItemSearchModel } from "../models/item.search.model";
+import { StateService } from '../../shared/services/state.service';
 
 @Component({
-    selector: 'item-definition-list',
-    templateUrl: '../templates/item.list.html'
+    selector: 'state-list',
+    templateUrl: '../templates/state.list.html'
 })
 
-export class ItemList implements OnInit, OnDestroy{
-    @Input() searchOptions: ItemSearchModel = new ItemSearchModel(0, 20);
+export class StateList implements OnInit, OnDestroy{
     @Output() totalCount = new EventEmitter();
-    public items: any[] = [];
+    public states: any[] = [];
     private changeSubsrciption: any = null;
 
-    constructor(private itemService: ItemService, private commonService: CommonService) { }
+    constructor(private stateService: StateService, private commonService: CommonService) { }
 
     ngOnInit(): void {
-        this.changeSubsrciption = EmitterService.get("ItemSearchChanged").subscribe(() => this.getItems());        
+        console.log("onInit List called");
+        this.getItems();
+        this.changeSubsrciption = EmitterService.get("StateSearchChanged").subscribe(() => this.getItems());        
     }
 
     ngOnDestroy(): void {
         this.changeSubsrciption.unsubscribe();
     }
 
-    private getItems(): void {        
-        this.itemService
-            .getItems(this.searchOptions)
+    private getItems(): void {
+        console.warn("getItems() called");
+        this.stateService
+            .getStates()
             .then((res) => {                
-                this.items = res.json();                
+                this.states = res.json();                
                 this.totalCount.emit(res.headers.get('X-TotalCount'));                
             });        
     }

@@ -15,8 +15,8 @@ export class StateService {
 
     constructor(private http: Http, private errorHandlerService: ErrorHandlerService, private commonService: CommonService) { }
 
-    public getItems(): Promise<Response> {
-        return this.http.get(this.url, { search: this.getParams(searchOptions) })
+    public getStates(): Promise<Response> {
+        return this.http.get(this.url)
             .toPromise()
             .then((response: Response) => response)
             .catch(this.errorHandlerService.handleError);

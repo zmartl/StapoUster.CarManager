@@ -1,7 +1,7 @@
 ﻿<div class="row">
   <div class="col-sm-12">
     <div class="page-header">
-      <h1>{{ 'itemDefinition' | translate }} {{ 'overview' | translate }}</h1>
+      <h1>{{ 'state' | translate }} {{ 'overview' | translate }}</h1>
     </div>
   </div>
 </div>
@@ -9,18 +9,11 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="search">
-      <search-box (update)="changeSearchTerm($event)" [searchForTranslation]="'item'"></search-box>
-      <md-checkbox [(ngModel)]="searchOptions.withDeleted" [color]="'primary'" (change)="changeItemSearch()">
-        {{ 'showInactive' | translate }}
-      </md-checkbox>
+      <search-box [searchForTranslation]="'state'"></search-box>
     </div>
 
-    <item-definition-list [searchOptions]="searchOptions" (totalCount)="totalCount = $event"></item-definition-list>
+    <state-list (totalCount)="totalCount = $event"></state-list>
   </div>
 </div>
 
-<item-definition-menu></item-definition-menu>
-
-<div [hidden]="totalCount === undefined || totalCount < searchOptions.pageSize" class="text-center">
-  <ngb-pagination [collectionSize]="totalCount" [pageSize]="searchOptions.pageSize" [(page)]="page" [maxSize]="5" (pageChange)="changeItemSearch()"></ngb-pagination>
-</div>
+<state-menu></state-menu>

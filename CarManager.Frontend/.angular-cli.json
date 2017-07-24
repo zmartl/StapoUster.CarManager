@@ -1,6 +1,7 @@
 ﻿{
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
+    "version": "1.0.0",
     "name": "carmanager-frontend"
   },
   "apps": [
@@ -19,6 +20,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/font-awesome/scss/font-awesome.scss",
+        "../node_modules/ng2-slim-loading-bar/bundles/style.css",
         "styles.css"
       ],
       "scripts": [],

@@ -1,14 +1,14 @@
 ﻿import { Pipe } from "@angular/core";
 
-import {ItemModel} from "../../shared/models/item.model";
+import {StateModel} from "../../shared/models/state.model";
 
 @Pipe({
     name: "itemSearch"
 })
 
-export class EmailrecipientSearchPipe
+export class StateSearchPipe
 {
-    transform(value: ItemModel[], searchTerm: string) {
+    transform(value: StateModel[], searchTerm: string) {
         if (searchTerm === '') {
             return value;
         }
@@ -16,7 +16,7 @@ export class EmailrecipientSearchPipe
         searchTerm = searchTerm.toLowerCase();
 
         return value.filter(item =>
-            item.itemDefinitionId.toString().indexOf(searchTerm) !== -1 ||
+            item.id.toString().indexOf(searchTerm) !== -1 ||
             item.name.toString().indexOf(searchTerm) !== -1
         );
     }

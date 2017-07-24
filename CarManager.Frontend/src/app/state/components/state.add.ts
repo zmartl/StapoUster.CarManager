@@ -15,24 +15,24 @@ import { ErrorHandlerModel, ErrorMode } from "../../core/models/errorHandler.mod
 import { CommonService } from "../../core/services/common.service";
 import { ErrorHandlerService } from "../../core/services/errorHandler.service";
 
-import { ItemService } from "../../shared/services/item.service";
-import {ItemModel} from "../../shared/models/item.model";
+import { StateService } from "../../shared/services/state.service";
+import { StateModel } from "../../shared/models/state.model";
 
 @Component({
-    selector: 'item-definition-add',
-    templateUrl: '../templates/item.add.html'
+    selector: 'state-definition-add',
+    templateUrl: '../templates/state.add.html'
 })
 
-export class ItemAdd implements OnInit, CanComponentDeactivate {
-    public item: ItemModel;
-    private itemCopy: ItemModel;
+export class StateAdd implements OnInit, CanComponentDeactivate {
+    public state: StateModel;
+    private stateCopy: StateModel;
 
     private routeSubscription: any;
     private isEditMode = false;
 
     constructor(
         private activatedRoute: ActivatedRoute,
-        private itemService: ItemService,
+        private stateService: StateService,
         private commonService: CommonService,
         private translate: TranslateService,
         private toastr: ToastrService,
@@ -48,7 +48,7 @@ export class ItemAdd implements OnInit, CanComponentDeactivate {
                     this.isEditMode = true;
                     this.getItem(+output); // (+) converts string 'id' to a number
                 } else {
-                    this.item = new ItemModel();
+                    this.state = new StateModel();
                 }
 
                 this.copyInput();
@@ -56,30 +56,26 @@ export class ItemAdd implements OnInit, CanComponentDeactivate {
     }
 
     private getItem(id: number): void {
-        this.itemService
+        this.stateService
             .get(id)
             .subscribe(result => {
-                this.item = result;
+                this.state = result;
                 this.copyInput();
             });
     }
 
     private copyInput() {
-        this.itemCopy = _.cloneDeep(this.item);
-    }
-
-    private changeActiveState($event: MdSlideToggleChange): void {
-        this.item.isDeleted = $event.checked;
+        this.stateCopy = _.cloneDeep(this.state);
     }
 
     public save(): void {
         if (!this.isEditMode) {
-            this.itemService.add(this.item)
+            this.stateService.add(this.state)
                 .subscribe(
                 (response) => {
-                    this.translate.get(['itemDefinition', 'additional.create', 'success'])
+                    this.translate.get(['state', 'additional.create', 'success'])
                         .subscribe((res: string) => {
-                            this.toastr.success(res['itemDefinition'] + res['additional.create'],
+                            this.toastr.success(res['state'] + res['additional.create'],
                                 res['success']);
                         });
                     this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
@@ -89,12 +85,12 @@ export class ItemAdd implements OnInit, CanComponentDeactivate {
                     this.errorHandlerService.showError(error);
                 });
         } else {
-            this.itemService.update(this.item)
+            this.stateService.update(this.state)
                 .subscribe(
                 (response) => {
-                    this.translate.get(['itemDefinition', 'additional.update', 'success'])
+                    this.translate.get(['state', 'additional.update', 'success'])
                         .subscribe((res: string) => {
-                            this.toastr.success(res['itemDefinition'] + res['additional.update'],
+                            this.toastr.success(res['state'] + res['additional.update'],
                                 res['success']);
                         });
                     this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
@@ -107,7 +103,7 @@ export class ItemAdd implements OnInit, CanComponentDeactivate {
     }
 
     canDeactivate(): Observable<boolean> | boolean {
-        if (!_.isEqual(this.item, this.itemCopy)) {
+        if (!_.isEqual(this.state, this.stateCopy)) {
             let dialogRef = this.dialog.open(UnsavedChangesDialog);
             return dialogRef.afterClosed();
         } else {

@@ -3,8 +3,6 @@ import { URLSearchParams, Headers } from '@angular/http';
 
 import { ToastrConfig } from 'ngx-toastr';
 
-import { SearchModel } from "../../shared/models/search.model";
-
 @Injectable()
 export class CommonService {
     getHeader(): Headers {
@@ -23,25 +21,12 @@ export class CommonService {
         return toastrOptions;
     }
 
-    getSearchParams(searchModel: SearchModel): URLSearchParams {
+    getSearchParams(searchTerm: string): URLSearchParams {
         let params = new URLSearchParams();
 
-        if (this.isNullOrUndefined(searchModel)) {
-            return params;
-        }
-
-        if (!this.isNullOrUndefined(searchModel.start)) {
-            params.set('start', searchModel.start.toString());
-        }
-        if (!this.isNullOrUndefined(searchModel.pageSize)) {
-            params.set('pageSize', searchModel.pageSize.toString());
-        }
-        if (!this.isNullUndefinedOrEmpty(searchModel.searchTerm)) {
-            params.set('searchTerm', searchModel.searchTerm);
+        if (!this.isNullUndefinedOrEmpty(searchTerm)) {
+            params.set('searchTerm', searchTerm);
         } 
-        if (!this.isNullOrUndefined(searchModel.withDeleted)) {
-            params.set('withDeleted', searchModel.withDeleted.toString());
-        }
 
         return params;
     }

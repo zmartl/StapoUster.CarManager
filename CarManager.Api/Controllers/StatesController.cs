@@ -8,7 +8,7 @@ using System.Web.Http.Description;
 
 namespace CarManager.Api.Controllers
 {
-    [RoutePrefix("api/state")]
+    [RoutePrefix("api/states")]
     public class StatesController : ApiController
     {
         private readonly IStateService _stateService;

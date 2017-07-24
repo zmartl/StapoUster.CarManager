@@ -9,8 +9,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr item-definition-list-item *ngFor="let item of items" [item]="item"></tr>
-                <tr *ngIf="items.length === 0">
+                <tr state-list-item *ngFor="let state of states" [state]="state"></tr>
+                <tr *ngIf="states.length === 0">
                     <td colspan="5"><strong>{{'dialogs.noResult' | translate}}</strong></td>
                 </tr>
             </tbody>

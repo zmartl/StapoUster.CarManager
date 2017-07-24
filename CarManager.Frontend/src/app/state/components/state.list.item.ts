@@ -12,23 +12,22 @@ import { ErrorHandlerModel, ErrorMode } from "../../core/models/errorHandler.mod
 
 import { ErrorHandlerService } from "../../core/services/errorHandler.service";
 
-import { PositionService } from "../../shared/services/position.service";
-import { ItemService } from "../../shared/services/item.service";
-import {DeleteDialog} from "../../core/modules/deleteDialog/deleteDialog.component";
-import {ItemModel} from "../../shared/models/item.model";
+import { StateService } from "../../shared/services/state.service";
+import { DeleteDialog } from "../../core/modules/deleteDialog/deleteDialog.component";
+import { StateModel } from "../../shared/models/state.model";
 
 @Component({
-    selector: '[item-definition-list-item]',
-    templateUrl: '../templates/item.list.item.html'
+    selector: '[state-list-item]',
+    templateUrl: '../templates/state.list.item.html'
 })
 
-export class ItemListItem {
-    @Input() item: ItemModel;
-    private itemCopy: ItemModel;
+export class StateListItem {
+    @Input() state: StateModel;
+    private stateCopy: StateModel;
 
     public isEditMode: boolean = false;
 
-    constructor(public itemService: ItemService, private translate: TranslateService, private toastr: ToastrService, private commonService: CommonService, private dialog: MdDialog, private errorHandlerService: ErrorHandlerService) {}
+    constructor(public stateService: StateService, private translate: TranslateService, private toastr: ToastrService, private commonService: CommonService, private dialog: MdDialog, private errorHandlerService: ErrorHandlerService) {}
 
     public setEdit() {
         this.isEditMode = !this.isEditMode;
@@ -37,15 +36,15 @@ export class ItemListItem {
 
     public resetEdit() {
         this.isEditMode = !this.isEditMode;
-        this.item = this.itemCopy;
+        this.state = this.stateCopy;
     }
 
     private copyInput() {
-        this.itemCopy = _.cloneDeep(this.item);
+        this.stateCopy = _.cloneDeep(this.state);
     }
 
     private hasModelChanges(): boolean {
-        return !_.isEqual(this.item, this.itemCopy);
+        return !_.isEqual(this.state, this.stateCopy);
     }
 
     public canSave(form): boolean {
@@ -53,12 +52,12 @@ export class ItemListItem {
     }
 
     public update() {
-        this.itemService.update(this.item)
+        this.stateService.update(this.state)
             .subscribe(
             (response) => {
                 this.isEditMode = !this.isEditMode;
-                this.translate.get(['itemDefinition', 'additional.update', 'success']).subscribe((res: string) => {
-                    this.toastr.success(res['itemDefinition'] + res['additional.update'], res['success']);
+                this.translate.get(['state', 'additional.update', 'success']).subscribe((res: string) => {
+                    this.toastr.success(res['state'] + res['additional.update'], res['success']);
                 });
             },
             (error: ErrorHandlerModel) => {
@@ -70,13 +69,13 @@ export class ItemListItem {
         let dialogRef = this.dialog.open(DeleteDialog);
         dialogRef.afterClosed().subscribe(result => {
             if (result) {
-                this.itemService.delete(this.item.itemDefinitionId)
+                this.stateService.delete(this.state.id)
                     .subscribe(
                     () => {
-                        this.translate.get(['itemDefinition', 'additional.delete', 'success']).subscribe((res: string) => {
-                            this.toastr.success(res['itemDefinition'] + res['additional.delete'], res['success']);
+                        this.translate.get(['state', 'additional.delete', 'success']).subscribe((res: string) => {
+                            this.toastr.success(res['state'] + res['additional.delete'], res['success']);
                         });
-                        EmitterService.get("ItemSearchChanged").emit();
+                        EmitterService.get("StateSearchChanged").emit();
                     },
                     (error: ErrorHandlerModel) => {
                         this.errorHandlerService.showError(error);
@@ -86,9 +85,9 @@ export class ItemListItem {
     }
 
     public toggleActive() {
-        this.itemService.toggleActive(this.item.itemDefinitionId)
+        this.stateService.toggleActive(this.state.id)
             .subscribe(() => {
-                EmitterService.get("ItemSearchChanged").emit();
+                EmitterService.get("StateSearchChanged").emit();
             },
             (error: ErrorHandlerModel) => {
                 this.errorHandlerService.showError(error);
