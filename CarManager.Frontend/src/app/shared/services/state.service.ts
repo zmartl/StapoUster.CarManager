@@ -46,12 +46,6 @@ export class StateService {
             .catch(this.errorHandlerService.handleError);
     }
 
-    public toggleActive(positionDefinitionId: number): Observable<any> {
-        return this.http.get(`${this.url}/toggleDelete/${positionDefinitionId}`)
-            .map((response: Response) => response.json())
-            .catch(this.errorHandlerService.handleError);
-    }
-
     private getParams(stateSearchModel: StateModel = null): URLSearchParams {
         let params = new URLSearchParams();
 

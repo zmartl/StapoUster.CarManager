@@ -83,14 +83,4 @@ export class StateListItem {
             }
         });
     }
-
-    public toggleActive() {
-        this.stateService.toggleActive(this.state.id)
-            .subscribe(() => {
-                EmitterService.get("StateSearchChanged").emit();
-            },
-            (error: ErrorHandlerModel) => {
-                this.errorHandlerService.showError(error);
-            });
-    }
 }

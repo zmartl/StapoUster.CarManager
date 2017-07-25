@@ -1,7 +1,8 @@
 ﻿<header></header>
 
-<div class="container-fluid zrh-view-wrapper" [ngClass]="{ 'sidebar-offcanvas--opened' : offCanvasToggler.isMenuOpen, 'sidebar-offcanvas--closed': !offCanvasToggler.isMenuOpen }">
-    <site-navigation></site-navigation>
+<site-navigation></site-navigation>
+
+<div class="container-fluid zrh-view-wrapper" [ngClass]="{ 'sidebar-offcanvas--opened' : offCanvasToggler.isMenuOpen, 'sidebar-offcanvas--closed': !offCanvasToggler.isMenuOpen }">    
 
     <div>
         <p class="hidden-beamer hidden-lg sidebar-toggle-button">

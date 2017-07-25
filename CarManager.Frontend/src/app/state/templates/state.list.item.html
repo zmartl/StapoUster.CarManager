@@ -2,8 +2,7 @@
   <span>{{state.name}}</span>
 </td>
 <td>
-  <a (click)="setEdit()" mdTooltip="{{'dialogs.change' | translate}}"><i class="fa fa-pencil"></i></a>
-  <a (click)="toggleActive()" mdTooltip="{{'deactivate' | translate}}"><i class="fa fa-ban"></i></a>
-  <a (click)="delete()" mdTooltip="{{'dialogs.delete.name' | translate}}"><i class="fa fa-trash-o"></i></a>
+  <a routerLink="/state/{{state.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+  <a (click)="delete()"><i class="fa fa-trash-o"></i></a>
 </td>
 

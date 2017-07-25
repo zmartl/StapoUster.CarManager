@@ -19,7 +19,7 @@ export class AppComponent {
         this.offCanvasToggler = OffCanvasTogglerService;
 
         translate.addLangs(["en", "de"]);
-        translate.setDefaultLang('en');
+        translate.setDefaultLang('de');
 
         let browserLang = translate.getBrowserLang();
         translate.use(browserLang.match(/en|de/) ? browserLang : 'en');

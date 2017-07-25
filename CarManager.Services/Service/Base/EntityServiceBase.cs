@@ -48,7 +48,7 @@ namespace CarManager.Services.Service.Base
                 return new RepositoryActionResult<T>(entity, RepositoryActionStatus.NotFound);
             }
 
-            _repository.Update(entity);
+            _repository.Update(existingEntity, entity);
 
             var result = _repository.Save();
             if (result > 0)

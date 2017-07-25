@@ -123,6 +123,12 @@
     <None Include="src\assets\fonts\FontAwesome.otf" />
     <None Include="src\assets\locale\de.json" />
     <None Include="src\assets\locale\en.json" />
+    <None Include="src\styles\css\bootstrap-grid.css.map" />
+    <None Include="src\styles\css\bootstrap-grid.min.css.map" />
+    <None Include="src\styles\css\bootstrap-reboot.css.map" />
+    <None Include="src\styles\css\bootstrap-reboot.min.css.map" />
+    <None Include="src\styles\css\bootstrap.css.map" />
+    <None Include="src\styles\css\bootstrap.min.css.map" />
     <None Include="src\tsconfig.app.json" />
     <None Include="src\tsconfig.spec.json" />
     <None Include="tsconfig.json" />
@@ -156,6 +162,14 @@
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
+    <Content Include="src\styles\css\bootstrap-grid.css" />
+    <Content Include="src\styles\css\bootstrap-grid.min.css" />
+    <Content Include="src\styles\css\bootstrap-reboot.css" />
+    <Content Include="src\styles\css\bootstrap-reboot.min.css" />
+    <Content Include="src\styles\css\bootstrap.css" />
+    <Content Include="src\styles\css\bootstrap.min.css" />
+    <Content Include="src\styles\js\bootstrap.js" />
+    <Content Include="src\styles\js\bootstrap.min.js" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

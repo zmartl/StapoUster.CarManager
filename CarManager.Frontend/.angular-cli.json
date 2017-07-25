@@ -22,9 +22,16 @@
       "styles": [
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../node_modules/ng2-slim-loading-bar/bundles/style.css",
-        "styles.css"
+        "../node_modules/tether/dist/css/tether.min.css",
+        "styles/css/bootstrap.css",
+        "../node_modules/ngx-toastr/toastr.css",
+        "styles/style.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/tether/dist/js/tether.min.js",
+        "styles/js/bootstrap.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -57,7 +64,19 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "prefixInterfaces": false,
+    "inline": {
+      "style": false,
+      "template": false
+    },
+    "spec": {
+      "class": false,
+      "component": true,
+      "directive": true,
+      "module": false,
+      "pipe": true,
+      "service": true
+    }
   }
 }

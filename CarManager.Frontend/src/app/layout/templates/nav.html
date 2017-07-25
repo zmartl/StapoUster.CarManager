@@ -1,55 +1,27 @@
-﻿<aside class="main-sidebar sidebar-offcanvas">
-    <div class="sidebar-menu">
-        <ul class="list-group">
-            <!--level one-->
-            <li class="list-group-item" [ngClass]="{'open' : activeAppMenu}">
-                <a class="sidebar-menu-link" (click)="activeAppMenu = !activeAppMenu">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                    {{ 'erunway' | translate }} {{ 'admin' | translate }}
-                    <i class="fa pull-right" [ngClass]="{ 'fa-angle-left' : activeAppMenu, 'fa-angle-down' : !activeAppMenu}"></i>
-                </a>
-                <!--level two-->
-                <ul class="sub-list-group list-group-menu" *ngIf="activeAppMenu">
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/users"><i class="fa fa-user"></i> {{ 'users' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/positionDefinitions"><i class="fa fa-eye"></i> {{ 'positionDefinitions' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/positionRunways"><i class="fa fa-street-view"></i> {{ 'positionRunways' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/reportReasons"><i class="fa fa-telegram"></i> {{ 'reportReasons' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/messages"><i class="fa fa-comment-o"></i> {{ 'messages' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/taxiways"><i class="fa fa-road"></i> {{ 'taxiways' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/checkItems"><i class="fa fa-dot-circle-o"></i> {{ 'checkItems' | translate }}</a>
-                    </li>
-                  <li class="sub-list-group-item" routerLinkActive="active">
-                    <a class="sidebar-menu-link__sublist" routerLink="/complaintObjects"><i class="fa fa-sticky-note"></i> {{ 'complaintObject' | translate }}</a>
-                  <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/items"><i class="fa fa-list-alt"></i> {{ 'itemDefinitions' | translate }}</a>
-                    </li>
-                  <li class="sub-list-group-item" routerLinkActive="active">
-                    <a class="sidebar-menu-link__sublist" routerLink="/sanctionDefinitions"><i class="fa fa-hand-paper-o"></i> {{ 'sanctionDefinitions' | translate }}</a>
-                  </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/emailrecipients"><i class="fa fa-envelope-o"></i> {{ 'emailRecipients' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/pdfSettings"><i class="fa fa-file-pdf-o"></i> {{ 'pdfSettings' | translate }}</a>
-                    </li>
-                    <li class="sub-list-group-item" routerLinkActive="active">
-                        <a class="sidebar-menu-link__sublist" routerLink="/dmsSettings"><i class="fa fa-file-o"></i> {{ 'dmsSettings' | translate }}</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</aside>
+﻿<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse mb-4">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">{{'author.title' | translate}}</a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{'admin.title' | translate}}</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/car">{{'admin.car.one' | translate}}</a>
+          <a class="dropdown-item" routerLink="/state">{{'admin.state.one' | translate}}</a>          
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

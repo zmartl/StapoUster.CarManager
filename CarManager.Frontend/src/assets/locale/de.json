@@ -28,11 +28,26 @@
         "update": " wurde erfolgreich gespeichert.",
         "with": " mit "
     },
-    "admin": "Admin",
+  "admin": {
+    "title": "Admin",
+    "car": {
+      "one": "Fahrzeug",
+      "multiple": "Fahrzeuge"
+    },
+    "state": {
+      "one": "Status",
+      "multiple": "Status"
+    }
+  },
     "all": "Alle",
-    "applicationStarting": "Applikation Startet...",
+    "applicationStarting": "Applikation Startet...",    
     "approachRoads": "Zufahrtsstrassen",
     "arrangements": "Massnahmen",
+    "author": {
+      "title": "Fahrzeugverwaltung",
+      "organisation": "Stadtpolizei Uster",
+      "unit": "Verwaltungspolizei"
+    },
     "available": "Verfügbar",
     "causes": "Ursachen",
     "checkItem": "Kontrollpunkt",
