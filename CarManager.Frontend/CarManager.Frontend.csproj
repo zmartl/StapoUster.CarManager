@@ -170,6 +170,7 @@
     <Content Include="src\styles\css\bootstrap.min.css" />
     <Content Include="src\styles\js\bootstrap.js" />
     <Content Include="src\styles\js\bootstrap.min.js" />
+    <Content Include="src\styles\style.css" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
