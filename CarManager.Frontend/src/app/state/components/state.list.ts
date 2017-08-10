@@ -18,8 +18,7 @@ export class StateList implements OnInit, OnDestroy{
 
     constructor(private stateService: StateService, private commonService: CommonService) { }
 
-    ngOnInit(): void {
-        console.log("onInit List called");
+    ngOnInit(): void {        
         this.getItems();
         this.changeSubsrciption = EmitterService.get("StateSearchChanged").subscribe(() => this.getItems());        
     }
@@ -29,7 +28,6 @@ export class StateList implements OnInit, OnDestroy{
     }
 
     private getItems(): void {
-        console.warn("getItems() called");
         this.stateService
             .getStates()
             .then((res) => {                

@@ -56,8 +56,8 @@ export class StateListItem {
             .subscribe(
             (response) => {
                 this.isEditMode = !this.isEditMode;
-                this.translate.get(['state', 'additional.update', 'success']).subscribe((res: string) => {
-                    this.toastr.success(res['state'] + res['additional.update'], res['success']);
+                this.translate.get(['state.one', 'additional.update', 'success']).subscribe((res: string) => {
+                    this.toastr.success(res['state.one'] + res['additional.update'], res['success']);
                 });
             },
             (error: ErrorHandlerModel) => {
@@ -72,8 +72,8 @@ export class StateListItem {
                 this.stateService.delete(this.state.id)
                     .subscribe(
                     () => {
-                        this.translate.get(['state', 'additional.delete', 'success']).subscribe((res: string) => {
-                            this.toastr.success(res['state'] + res['additional.delete'], res['success']);
+                        this.translate.get(['state.one', 'additional.delete', 'success']).subscribe((res: string) => {
+                            this.toastr.success(res['state.one'] + res['additional.delete'], res['success']);
                         });
                         EmitterService.get("StateSearchChanged").emit();
                     },

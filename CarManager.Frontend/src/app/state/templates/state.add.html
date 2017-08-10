@@ -1,12 +1,12 @@
 ﻿<div *ngIf="state">
   <div class="row">
-    <div class="col-md-12 col-lg-10 col-lg-offset-1">
-      <h1 *ngIf="!isEditMode">{{ 'state' | translate }}{{ 'additional.add' | translate }}</h1>
-      <h1 *ngIf="isEditMode">{{ 'state' | translate }}{{ 'additional.edit' | translate }}</h1>
+    <div class="col-md-12 col-lg-12 col-lg-offset-1">
+      <h1 *ngIf="!isEditMode">{{ 'state.one' | translate }}{{ 'additional.add' | translate }}</h1>
+      <h1 *ngIf="isEditMode">{{ 'state.one' | translate }}{{ 'additional.edit' | translate }}</h1>
       <form #f="ngForm" novalidate>
         <div class="form-group">
-          <label for="name">{{ 'name' | translate }}</label>
-          <input type="text" class="form-control" [(ngModel)]="state.name" name="name" id="name" placeholder="{{ 'name' | translate }}{{ 'additional.add' | translate }}" required>
+          <label for="name">{{ 'state.one' | translate }}</label>
+          <input type="text" class="form-control" [(ngModel)]="state.name" name="name" id="name" placeholder="{{ 'state.one' | translate }}{{ 'additional.add' | translate }}" required>
         </div>
       </form>
     </div>

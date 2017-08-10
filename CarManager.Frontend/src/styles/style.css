@@ -1,1 +1,22 @@
 ﻿@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.main-content {
+  margin-top: 25px;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  /*font-size: 2rem;*/
+}
+
+.add-button {
+  margin: 5px 0 25px 0 !important;
+}
+
+.mat-accent {
+  background-color: #4caf50;
+}

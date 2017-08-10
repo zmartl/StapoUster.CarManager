@@ -73,11 +73,9 @@ export class StateAdd implements OnInit, CanComponentDeactivate {
             this.stateService.add(this.state)
                 .subscribe(
                 (response) => {
-                    this.translate.get(['state', 'additional.create', 'success'])
-                        .subscribe((res: string) => {
-                            this.toastr.success(res['state'] + res['additional.create'],
-                                res['success']);
-                        });
+                    this.translate.get(['state.one', 'additional.create', 'success']).subscribe((res: string) => {
+                        this.toastr.success(res['state.one'] + res['additional.create'], res['success']);
+                    });
                     this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
                     this.location.back();
                 },
@@ -88,11 +86,9 @@ export class StateAdd implements OnInit, CanComponentDeactivate {
             this.stateService.update(this.state)
                 .subscribe(
                 (response) => {
-                    this.translate.get(['state', 'additional.update', 'success'])
-                        .subscribe((res: string) => {
-                            this.toastr.success(res['state'] + res['additional.update'],
-                                res['success']);
-                        });
+                    this.translate.get(['state.one', 'additional.update', 'success']).subscribe((res: string) => {
+                        this.toastr.success(res['state.one'] + res['additional.update'], res['success']);
+                    });
                     this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
                     this.location.back();
                 },

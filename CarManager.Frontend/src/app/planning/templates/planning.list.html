@@ -1,0 +1,18 @@
+﻿<div class="row">
+    <div class="table-responsive col-sm-12">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th class="col-sm-9">{{ 'planning.one' | translate }}</th>                    
+                    <th class="col-sm-1">{{ 'actions' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr planning-list-item *ngFor="let planning of plannings" [planning]="planning"></tr>
+                <tr *ngIf="plannings.length === 0">
+                    <td colspan="2"><strong>{{'dialogs.noResult' | translate}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

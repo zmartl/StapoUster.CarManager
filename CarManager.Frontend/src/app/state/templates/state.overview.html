@@ -1,19 +1,18 @@
 ﻿<div class="row">
   <div class="col-sm-12">
     <div class="page-header">
-      <h1>{{ 'state' | translate }} {{ 'overview' | translate }}</h1>
+      <h1>{{ 'state.one' | translate }} {{ 'pages.overview' | translate }}</h1>      
     </div>
   </div>
 </div>
 
 <div class="row">
   <div class="col-sm-12">
-    <div class="search">
-      <search-box [searchForTranslation]="'state'"></search-box>
-    </div>
+    <a class="add-button" md-raised-button routerLink="/state/add"><i class="fa fa-plus"></i>&nbsp;{{'dialogs.add' | translate}}</a>	
+    <!--<div class="search">
+      <search-box [searchForTranslation]="'state.one'"></search-box>
+    </div>-->
 
     <state-list (totalCount)="totalCount = $event"></state-list>
   </div>
 </div>
-
-<state-menu></state-menu>

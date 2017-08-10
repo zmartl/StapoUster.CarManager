@@ -1,0 +1,11 @@
+﻿<td>
+  <span>{{car.description}}</span>
+</td>
+<td>
+  <span>{{car.radio}}</span>
+</td>
+<td class="text-right">
+  <a routerLink="/car/{{car.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a> |
+  <a (click)="delete()"><i class="fa fa-trash-o"></i></a>
+</td>
+

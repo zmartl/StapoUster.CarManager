@@ -1,0 +1,18 @@
+﻿<div class="row">
+  <div class="col-sm-12">
+    <div class="page-header">
+      <h1>{{ 'car.one' | translate }} {{ 'pages.overview' | translate }}</h1>      
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <a class="add-button" md-raised-button routerLink="/car/add"><i class="fa fa-plus"></i>&nbsp;{{'dialogs.add' | translate}}</a>	
+    <!--<div class="search">
+      <search-box [searchForTranslation]="'car.one'"></search-box>
+    </div>-->
+
+    <car-list (totalCount)="totalCount = $event"></car-list>
+  </div>
+</div>

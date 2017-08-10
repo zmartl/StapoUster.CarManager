@@ -5,18 +5,7 @@
 <div class="container-fluid zrh-view-wrapper" [ngClass]="{ 'sidebar-offcanvas--opened' : offCanvasToggler.isMenuOpen, 'sidebar-offcanvas--closed': !offCanvasToggler.isMenuOpen }">    
 
     <div>
-        <p class="hidden-beamer hidden-lg sidebar-toggle-button">
-            <button type="button" class="navbar-toggle header-navigation-toggle pull-left visible-xs visible-sm visible-md hidden-lg" [ngClass]="{ 'open' : offCanvasToggler.isMenuOpen }" (click)="offCanvasToggler.toggleMenu()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </p>
-
-        <div class="offcanvas-overlay hidden-beamer hidden-lg" [hidden]="!offCanvasToggler.isMenuOpen"></div>
-
-        <div class="main-content">
+        <div class="main-content container">
             <router-outlet></router-outlet>
         </div>
 </div>
