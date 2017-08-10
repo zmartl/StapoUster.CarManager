@@ -1,5 +1,7 @@
 ﻿import { Component, Input, Output, EventEmitter } from '@angular/core';
 
+import { DatePipe } from '@angular/common';
+
 import { TranslateService } from 'ng2-translate';
 import { ToastrService } from 'ngx-toastr';
 import { MdDialog } from '@angular/material';

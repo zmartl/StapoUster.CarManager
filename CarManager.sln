@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManager.Api", "CarManager.Api\CarManager.Api.csproj", "{EC0041F4-82A7-416B-942B-C2415BAC3378}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManager.Frontend", "CarManager.Frontend\CarManager.Frontend.csproj", "{C4BB845B-F5AE-4805-BA88-421A3B43593A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManager.Services", "CarManager.Services\CarManager.Services.csproj", "{56636038-0014-41C1-B241-236B9F80B972}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManager.Repositories", "CarManager.Repositories\CarManager.Repositories.csproj", "{F478C32D-80F3-4F26-9DC8-EA32AC4A6C2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarManager.DataAccess", "CarManager.DataAccess\CarManager.DataAccess.csproj", "{EF83BF32-E488-4468-94D8-CFB9B1927E93}"
 EndProject
@@ -37,10 +35,6 @@ Global
 		{56636038-0014-41C1-B241-236B9F80B972}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56636038-0014-41C1-B241-236B9F80B972}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56636038-0014-41C1-B241-236B9F80B972}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F478C32D-80F3-4F26-9DC8-EA32AC4A6C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F478C32D-80F3-4F26-9DC8-EA32AC4A6C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F478C32D-80F3-4F26-9DC8-EA32AC4A6C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F478C32D-80F3-4F26-9DC8-EA32AC4A6C2E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EF83BF32-E488-4468-94D8-CFB9B1927E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EF83BF32-E488-4468-94D8-CFB9B1927E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF83BF32-E488-4468-94D8-CFB9B1927E93}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -82,21 +82,14 @@ namespace CarManager.Api.Controllers
                 if (!ModelState.IsValid)
                 {
                     return BadRequest(ModelState);
-                }
+                }              
 
-                if(planningViewModel.Car.Id > 0)
-                {
-                    throw new ArgumentException("Nicht alle Felder wurden korrekt gesetzt");                    
-                }
-                planningViewModel.Car = AutoMapperGenerator.Mapper.Map<CarViewModel>(_carService.GetSingleById(planningViewModel.Car.Id));
+                var startTime = planningViewModel.StartTime;
+                planningViewModel.StartTime = new DateTime(startTime.Year, startTime.Month, startTime.Day, 0, 0, 0);
 
-                if (planningViewModel.State.Id > 0)
-                {
-                    throw new ArgumentException("Nicht alle Felder wurden korrekt gesetzt");
-                }
-                planningViewModel.State = AutoMapperGenerator.Mapper.Map<StateViewModel>(_stateService.GetSingleById(planningViewModel.State.Id));
-
-
+                var endTime = planningViewModel.EndTime;
+                planningViewModel.EndTime = new DateTime(endTime.Year, endTime.Month, endTime.Day, 23, 59, 59);
+              
                 _planningService.Insert(AutoMapperGenerator.Mapper.Map<Planning>(planningViewModel));
                 return CreatedAtRoute("DefaultApi", new { id = planningViewModel.Id }, planningViewModel);
             }

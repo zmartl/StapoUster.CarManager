@@ -1,5 +1,14 @@
 ﻿<td>
-  <span>{{planning.name}}</span>
+  <span>{{planning.startTime | date:'dd.MM.yyyy'}} - {{planning.startTime | date:'dd.MM.yyyy'}}</span>
+</td>
+<td>
+  <span>{{planning.startTime | date:'dd.MM.yyyy'}}</span>
+</td>
+<td>
+  <span>{{planning.startTime | date:'dd.MM.yyyy'}}</span>
+</td>
+<td>
+  <span>{{planning.endTime | date:'dd.MM.yyyy'}}</span>
 </td>
 <td class="text-right">
   <a routerLink="/planning/{{planning.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a> |

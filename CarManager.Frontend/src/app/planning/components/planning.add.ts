@@ -40,7 +40,7 @@ export class PlanningAdd implements OnInit, CanComponentDeactivate {
         format: 'DD.MM.YYYY'
     };
 
-    public planning: PlanningModel;
+    public planning: PlanningModel;cmder
     private planningCopy: PlanningModel;
 
     private routeSubscription: any;
@@ -122,7 +122,17 @@ export class PlanningAdd implements OnInit, CanComponentDeactivate {
         this.planningCopy = _.cloneDeep(this.planning);
     }
 
+    private getFormattedDate(formDate: string) {
+        return moment(formDate, this.datePickerConfig.format).format(this.datePickerConfig.format);
+    }
+
     public save(): void {
+
+
+        this.planning.startTime = moment(this.planning.startTime, 'DD.MM.YYYY').format('YYYY.MM.DD'); 
+        this.planning.endTime = moment(this.planning.endTime, 'DD.MM.YYYY').format('YYYY.MM.DD'); 
+
+
         if (!this.isEditMode) {
             this.planningService.add(this.planning)
                 .subscribe(
