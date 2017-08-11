@@ -4,6 +4,7 @@ using CarManager.Shared.Common;
 using CarManager.Shared.Models;
 using CarManager.Shared.ViewModels;
 using System;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
@@ -133,6 +134,10 @@ namespace CarManager.Api.Controllers
                 }
 
                 return StatusCode(HttpStatusCode.NoContent);
+            }
+            catch (DbUpdateException e)
+            {
+                return Conflict();
             }
             catch (Exception exception)
             {

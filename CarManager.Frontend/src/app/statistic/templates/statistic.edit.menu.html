@@ -1,0 +1,6 @@
+﻿<aside class="actionbar actionbar-offcanvas">
+  <div class="element-add">
+    <button md-raised-button [color]="'accent'" (click)="save()" [disabled]="!isValid"><i class="fa fa-floppy-o"></i>&nbsp;{{'dialogs.save' | translate}}</button>
+    <a md-raised-button (click)="back()"><i class="fa fa-arrow-left"></i>&nbsp;{{'dialogs.back' | translate}}</a>
+  </div>
+</aside>

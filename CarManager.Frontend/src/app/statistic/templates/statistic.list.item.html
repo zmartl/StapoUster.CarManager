@@ -1,0 +1,14 @@
+﻿<td>
+  <span>{{statistic.startDate}} - {{statistic.startDate}}</span>
+</td>
+<td>
+  <span>{{statistic.startDate | date:'dd.MM.yyyy'}}</span>
+</td>
+<td>
+  <span>{{statistic.endDate | date:'dd.MM.yyyy'}}</span>
+</td>
+<td class="text-right">
+  <a routerLink="/statistic/{{statistic.id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a> |
+  <a (click)="delete()"><i class="fa fa-trash-o"></i></a>
+</td>
+

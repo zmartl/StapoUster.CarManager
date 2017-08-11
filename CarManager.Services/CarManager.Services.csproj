@@ -58,6 +58,8 @@
     <Compile Include="Service\Base\IEntityServiceBase.cs" />
     <Compile Include="Service\Car\ICarService.cs" />
     <Compile Include="Service\Car\CarService.cs" />
+    <Compile Include="Service\Statistic\IStatisticService.cs" />
+    <Compile Include="Service\Statistic\StatisticService.cs" />
     <Compile Include="Service\Planning\IPlanningService.cs" />
     <Compile Include="Service\Planning\PlanningService.cs" />
     <Compile Include="Service\State\IStateService.cs" />

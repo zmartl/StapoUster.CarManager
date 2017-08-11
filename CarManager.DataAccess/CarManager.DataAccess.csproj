@@ -77,6 +77,8 @@
     <Compile Include="RegisterDataAccessIocTypes.cs" />
     <Compile Include="Repositories\Car\ICarRepository.cs" />
     <Compile Include="Repositories\Car\CarRepository.cs" />
+    <Compile Include="Repositories\Statistic\IStatisticRepository.cs" />
+    <Compile Include="Repositories\Statistic\StatisticRepository.cs" />
     <Compile Include="Repositories\Planning\IPlanningRepository.cs" />
     <Compile Include="Repositories\Planning\PlanningRepository.cs" />
     <Compile Include="Repositories\State\IStateRepository.cs" />

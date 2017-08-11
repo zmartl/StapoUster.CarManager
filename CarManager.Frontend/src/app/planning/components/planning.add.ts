@@ -28,7 +28,7 @@ import { StateModel } from "../../shared/models/state.model";
 import { StateService } from "../../shared/services/state.service";
 
 @Component({
-    selector: 'planning-definition-add',
+    selector: 'planning-add',
     templateUrl: '../templates/planning.add.html'
 })
 
@@ -40,7 +40,7 @@ export class PlanningAdd implements OnInit, CanComponentDeactivate {
         format: 'DD.MM.YYYY'
     };
 
-    public planning: PlanningModel;cmder
+    public planning: PlanningModel;
     private planningCopy: PlanningModel;
 
     private routeSubscription: any;
@@ -122,44 +122,24 @@ export class PlanningAdd implements OnInit, CanComponentDeactivate {
         this.planningCopy = _.cloneDeep(this.planning);
     }
 
-    private getFormattedDate(formDate: string) {
-        return moment(formDate, this.datePickerConfig.format).format(this.datePickerConfig.format);
-    }
-
     public save(): void {
-
 
         this.planning.startTime = moment(this.planning.startTime, 'DD.MM.YYYY').format('YYYY.MM.DD'); 
         this.planning.endTime = moment(this.planning.endTime, 'DD.MM.YYYY').format('YYYY.MM.DD'); 
 
-
-        if (!this.isEditMode) {
-            this.planningService.add(this.planning)
-                .subscribe(
-                (response) => {
-                    this.translate.get(['planning.one', 'additional.create', 'success']).subscribe((res: string) => {
-                        this.toastr.success(res['planning.one'] + res['additional.create'], res['success']);
-                    });
-                    this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
-                    this.location.back();
-                },
-                (error: ErrorHandlerModel) => {
-                    this.errorHandlerService.showError(error);
-                });
-        } else {
-            this.planningService.update(this.planning)
-                .subscribe(
-                (response) => {
-                    this.translate.get(['planning.one', 'additional.update', 'success']).subscribe((res: string) => {
-                        this.toastr.success(res['planning.one'] + res['additional.update'], res['success']);
-                    });
-                    this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
-                    this.location.back();
-                },
-                (error: ErrorHandlerModel) => {
-                    this.errorHandlerService.showError(error);
-                });
-        }
+         this.planningService.add(this.planning)
+             .subscribe(
+             (response) => {
+                 this.translate.get(['planning.one', 'additional.create', 'success']).subscribe((res: string) => {
+                     this.toastr.success(res['planning.one'] + res['additional.create'], res['success']);
+                 });
+                 this.copyInput(); // Set the Input to the Copy Object, then the unsavedChangedHandler doesn't show the dialog
+                 EmitterService.get("PlanningAdded").emit();
+                 EmitterService.get("PlanningSearchChanged").emit();
+             },
+             (error: ErrorHandlerModel) => {
+                 this.errorHandlerService.showError(error);
+             });        
     }
 
     canDeactivate(): Observable<boolean> | boolean {

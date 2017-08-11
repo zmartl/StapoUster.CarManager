@@ -20,3 +20,24 @@ h1 {
 .mat-accent {
   background-color: #4caf50;
 }
+
+.mat-raised-button {
+  border-radius: 0 !important;
+}
+
+.breadcrumb {
+  border-radius: 0 !important;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+small {
+  color: #777;
+}
+
+.nav-logo {
+  width: 150px !important;
+}

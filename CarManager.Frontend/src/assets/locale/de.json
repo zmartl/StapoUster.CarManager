@@ -37,6 +37,7 @@
     "multiple": "Fahrzeuge",
     "radio": "Funk"
   },
+  "dashboard": "Dashboard",
   "dialogs": {
     "add": "Hinzufügen",
     "back": "Zurück",
@@ -77,6 +78,7 @@
     "wait": "Bitte warten...",
     "yes": "Ja"
   },
+  "error": "Fehler",
   "errorResponse": {
     "404Title": "404 Nicht gefunden",
     "404Message": "Die gewünschte Seite konnte nicht gefunden werden.",
@@ -86,6 +88,7 @@
   "fields": {
     "name": "Name"
   },
+  "onDuty": "Im Einsatz",
   "pages": {
     "overview": "Übersicht"
   },
@@ -101,8 +104,11 @@
   },
   "statistic": {
     "one": "Statistik",
-    "multiple": "Statistiken"
+    "multiple": "Statistiken",
+    "startDate": "Startdatum",
+    "endDate": "Enddatum"
   },
   "startpage": "Startseite",
-  "success": "Erfolgreich"
+  "success": "Erfolgreich",
+  "warning": "Warnung"
 }

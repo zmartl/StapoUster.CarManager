@@ -5,6 +5,8 @@ using CarManager.DataAccess.Repositories.State;
 using CarManager.Services.Service.Base;
 using CarManager.Shared.Common;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CarManager.Services.Service.Planning
 {
@@ -21,7 +23,9 @@ namespace CarManager.Services.Service.Planning
             _stateRepository = stateRepository;
         }
 
-        public RepositoryActionResult<Shared.Models.Planning> Insert(Shared.Models.Planning entity)
+        
+
+        public new RepositoryActionResult<Shared.Models.Planning> Insert(Shared.Models.Planning entity)
         {
             if (entity.Car == null)
             {
@@ -46,6 +50,23 @@ namespace CarManager.Services.Service.Planning
             }
 
             return new RepositoryActionResult<Shared.Models.Planning>(entity, RepositoryActionStatus.NothingModified, null);
+        }
+
+        public int GetCountPlannedPlanningsByState(IEnumerable<Shared.Models.Planning> plannings, string state)
+        {
+            var count = plannings.Count(x => x.State.Name.Equals(state));
+            return count;
+        }
+
+        public IEnumerable<Shared.Models.Planning> GetPlannedPlannings(DateTime starTime, DateTime endTime)
+        {
+            var plannedPlannings = _repository.GetAll().Where(
+                        x =>
+                            x.StartTime <= starTime && starTime <= x.EndTime ||
+                            x.StartTime <= endTime && endTime <= x.EndTime ||
+                            starTime <= x.StartTime && endTime >= x.EndTime).ToList();
+
+            return plannedPlannings;
         }
     }
 }

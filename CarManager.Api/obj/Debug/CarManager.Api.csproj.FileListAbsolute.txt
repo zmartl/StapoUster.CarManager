@@ -119,3 +119,6 @@ C:\Development\CarManager\CarManager.Api\bin\Microsoft.Owin.FileSystems.xml
 C:\Development\CarManager\CarManager.Api\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Development\CarManager\CarManager.Api\bin\Microsoft.Owin.StaticFiles.xml
 C:\Development\CarManager\CarManager.Api\bin\System.Web.Http.Owin.xml
+C:\Development\CarManager\CarManager.Api\bin\EPPlus.dll
+C:\Development\CarManager\CarManager.Api\bin\EPPlus.xml
+C:\Development\CarManager\CarManager.Api\bin\ICSharpCode.SharpZipLib.dll

@@ -6,6 +6,8 @@ using CarManager.Shared.Common;
 using CarManager.Shared.Models;
 using CarManager.Shared.ViewModels;
 using System;
+using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
@@ -140,6 +142,10 @@ namespace CarManager.Api.Controllers
                 {
                     return StatusCode(HttpStatusCode.NotModified);
                 }
+                if(result.Status == RepositoryActionStatus.Error)
+                {
+                    return StatusCode(HttpStatusCode.Conflict);                    
+                }
                 if (result.Status == RepositoryActionStatus.NotFound)
                 {
                     return NotFound();
@@ -147,9 +153,37 @@ namespace CarManager.Api.Controllers
 
                 return StatusCode(HttpStatusCode.NoContent);
             }
+            catch (DbUpdateException e)
+            {
+                return Conflict();
+            }
             catch (Exception exception)
             {
                 //ErrorSignal.FromCurrentContext().Raise(exception);
+                return InternalServerError(exception);
+            }
+        }
+
+        // GET api/plannings
+        /// <summary>
+        ///     Gibt eine Liste aller Planungen zurück die im Einsatz sind
+        /// </summary>
+        /// <returns>Liste der Status</returns>
+        [HttpGet]
+        [Route("planningsByActualDate")]
+        [ResponseType(typeof(PlanningViewModel))]
+        public IHttpActionResult planningsByActualDate()
+        {
+            try
+            {
+                var dateTime = DateTime.Now;
+                var allEntities = _planningService.GetAll().Where(x => x.StartTime <= dateTime && x.EndTime >= dateTime).ToList();
+
+                return Ok(allEntities.Select(AutoMapperGenerator.Mapper.Map<PlanningViewModel>).AsQueryable());
+            }
+            catch (Exception exception)
+            {
+                // ErrorSignal.FromCurrentContext().Raise(exception);
                 return InternalServerError(exception);
             }
         }

@@ -1,0 +1,69 @@
+﻿<div *ngIf="planning">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-lg-offset-1">
+      <h1 *ngIf="!isEditMode">{{ 'planning.one' | translate }}{{ 'additional.add' | translate }}</h1>
+      <h1 *ngIf="isEditMode">{{ 'planning.one' | translate }}{{ 'additional.edit' | translate }}</h1>
+      <form #f="ngForm" novalidate>
+
+        <div class="form-group">
+          <label for="car">{{'car.one' | translate}}</label>
+          <select id="car"
+                  name="car"
+                  class="form-control"
+                  [(ngModel)]="planning.car.id"
+                  (change)="onCarChanged()"
+                  required>
+            <option value="0" disabled>{{'pleaseSelect' | translate}}</option>
+            <option *ngFor="let car of cars" [ngValue]="car.id" [selected]="setSelectedCar(car)">{{car.description}} - {{car.radio}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="state">{{'state.one' | translate}}</label>
+          <select id="state"
+                  name="state"
+                  class="form-control"
+                  [(ngModel)]="planning.state.id"
+                  (change)="onStateChanged()"
+                  required>
+            <option value="0" disabled>{{'pleaseSelect' | translate}}</option>
+            <option *ngFor="let state of states" [ngValue]="state.id" [selected]="setSelectedState(state)">{{state.name}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="startTime">{{ 'planning.startDate' | translate }}</label><br/>
+          <input type="text"
+                 #fromDatePicker="dpDayPicker"
+                 [(ngModel)]="planning.startTime"
+                 [dpDayPicker]="datePickerConfig"
+                 [theme]="'dp-material'"
+                 [mode]="'day'"
+                 placeholder="Bitte Startdatum auswählen"
+                 class="form-control" 
+                 id="startTime" 
+                 name="startTime"
+                 required/>
+        </div>
+
+        <div class="form-group">
+          <label for="endTime">{{ 'planning.endDate' | translate }}</label><br />
+          <input type="text"
+                 #fromDatePicker="dpDayPicker"
+                 [(ngModel)]="planning.endTime"
+                 [dpDayPicker]="datePickerConfig"                 
+                 [theme]="'dp-material'"
+                 [mode]="'day'"
+                 placeholder="Bitte Enddatum auswählen"
+                 class="form-control" 
+                 id="endTime" 
+                 name="endTime" 
+                 required/>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <planning-edit-menu (saveClicked)="save()" [isValid]="f.valid"></planning-edit-menu>
+</div>

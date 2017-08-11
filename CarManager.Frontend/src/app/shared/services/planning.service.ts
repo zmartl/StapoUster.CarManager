@@ -22,6 +22,13 @@ export class PlanningService {
             .catch(this.errorHandlerService.handleError);
     }
 
+    public getNowPlannedPlannings(): Promise<Response> {
+        return this.http.get(this.url + "/planningsByActualDate")
+            .toPromise()
+            .then((response: Response) => response)
+            .catch(this.errorHandlerService.handleError);
+    }
+
     public get(id: number): Observable<PlanningModel> {
         return this.http.get(`${this.url}/${id}`)
             .map((response: Response) => response.json() as PlanningModel)

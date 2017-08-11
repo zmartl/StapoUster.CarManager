@@ -1,0 +1,20 @@
+﻿<div class="row">
+    <div class="table-responsive col-sm-12">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr class="m-0">
+                    <th class="w-40">{{ 'car.one' | translate }}</th>       
+                    <th class="w-25">{{ 'statistic.startDate' | translate }}</th>   
+                    <th class="w-25">{{ 'statistic.endDate' | translate }}</th>   
+                    <th class="w-10 text-right">{{ 'actions' | translate }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr statistic-list-item *ngFor="let statistic of statistics" [statistic]="statistic"></tr>
+                <tr *ngIf="statistics.length === 0">
+                    <td colspan="5"><strong>{{'dialogs.noResult' | translate}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

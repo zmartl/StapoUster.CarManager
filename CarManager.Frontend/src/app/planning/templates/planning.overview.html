@@ -8,11 +8,10 @@
 
 <div class="row">
   <div class="col-sm-12">
-    <a class="add-button" md-raised-button routerLink="/planning/add"><i class="fa fa-plus"></i>&nbsp;{{'dialogs.add' | translate}}</a>	
-    <!--<div class="search">
-      <search-box [searchForTranslation]="'planning.one'"></search-box>
-    </div>-->
+    <a class="add-button" md-raised-button (click)="onAddButtonClicked()"><i class="fa fa-plus"></i>&nbsp;{{'dialogs.add' | translate}}</a>	
+    
+    <planning-add *ngIf="addElementComponentIsVisible"></planning-add>
 
-    <planning-list (totalCount)="totalCount = $event"></planning-list>
-  </div>
+      <planning-list (totalCount)="totalCount = $event"></planning-list>
+</div>
 </div>

@@ -13,7 +13,7 @@ namespace CarManager.DataAccess.Context
         // in der Anwendungskonfigurationsdatei.
         public CarManagerDbContext() : base("name=CarManagerDbContext")
         {
-            Configuration.LazyLoadingEnabled = false;
+            Configuration.LazyLoadingEnabled = true;
 
             Database.SetInitializer(new Migrations.Configuration<CarManagerDbContext>());
 

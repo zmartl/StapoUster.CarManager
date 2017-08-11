@@ -11,6 +11,7 @@ import {PlanningModel} from "../../shared/models/planning.model";
     templateUrl: "../templates/planning.overview.html"
 } )
 export class PlanningOverview implements OnInit {
+    addElementComponentIsVisible = false;
     plannings: PlanningModel[] = [];   
     totalCount: number;
     page = 0;
@@ -18,10 +19,15 @@ export class PlanningOverview implements OnInit {
     constructor(private planningService: PlanningService) {}
 
     ngOnInit(): void {             
-        EmitterService.get("PlanningSearchChanged").emit();        
+        EmitterService.get("PlanningSearchChanged").emit();
+        EmitterService.get("PlanningAdded").subscribe(() => this.onAddButtonClicked());        
     }
 
     private changePlanningSearch() {        
         EmitterService.get( "PlanningSearchChanged" ).emit();
+    }
+
+    onAddButtonClicked() {
+        this.addElementComponentIsVisible = !this.addElementComponentIsVisible;
     }
 }
