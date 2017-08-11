@@ -225,7 +225,7 @@
     <Content Include="src\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="src\assets\fonts\fontawesome-webfont.svg" />
     <Content Include="src\assets\images\intro.png" />
-    <Content Include="src\assets\images\zrh_logo.png" />
+    <Content Include="src\assets\images\stadtuster.png" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
