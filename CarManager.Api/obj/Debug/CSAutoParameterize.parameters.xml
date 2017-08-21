@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CarManagerDbContext-Web.config Connection String" description="CarManagerDbContext Die in der Datei &amp;quot;web.config&amp;quot; festgelegte Verbindungszeichenfolge, die von der Anwendung für den Zugriff auf die Datenbank verwendet wird." defaultValue="Data Source=localhost\SQLSERVER2014; Initial Catalog=CarManager;User Id=CarManager;Password=C4rM@nag3r;Trusted_Connection=False;Persist Security Info=True;MultipleActiveResultSets=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Development\\CarManager\\CarManager\.Api\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CarManagerDbContext']/@connectionString" />
+  </parameter>
+</parameters>

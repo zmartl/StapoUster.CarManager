@@ -1,0 +1,7 @@
+C:\Development\CarManager\CarManager.Shared\bin\Release\CarManager.Shared.dll
+C:\Development\CarManager\CarManager.Shared\bin\Release\CarManager.Shared.pdb
+C:\Development\CarManager\CarManager.Shared\bin\Release\AutoMapper.dll
+C:\Development\CarManager\CarManager.Shared\bin\Release\AutoMapper.xml
+C:\Development\CarManager\CarManager.Shared\obj\Release\CarManager.Shared.csprojResolveAssemblyReference.cache
+C:\Development\CarManager\CarManager.Shared\obj\Release\CarManager.Shared.dll
+C:\Development\CarManager\CarManager.Shared\obj\Release\CarManager.Shared.pdb

@@ -219,6 +219,22 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="wwwroot\3rdpartylicenses.txt" />
+    <Content Include="wwwroot\assets\favicon.ico" />
+    <Content Include="wwwroot\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\assets\images\intro.png" />
+    <Content Include="wwwroot\assets\images\stadtuster.png" />
+    <Content Include="wwwroot\assets\images\zrh_logo - Kopie.png" />
+    <Content Include="wwwroot\favicon.ico" />
+    <Content Include="wwwroot\fontawesome-webfont.912ec66d7572ff821749.svg" />
+    <Content Include="wwwroot\index.html" />
+    <Content Include="wwwroot\inline.ef49ec49e1bd4b90d2e1.bundle.js" />
+    <Content Include="wwwroot\main.5ec4be32a348a7effe24.bundle.js" />
+    <Content Include="wwwroot\polyfills.c7f2b30f4d8ff16ddd31.bundle.js" />
+    <Content Include="wwwroot\scripts.2b0e8596aefcae296350.bundle.js" />
+    <Content Include="wwwroot\styles.7b96d4fa0c30288cd934.bundle.css" />
+    <Content Include="wwwroot\vendor.6f4dcc4c336993e33caf.bundle.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,6 +264,24 @@
       <Project>{b2a1fad7-7bc3-450c-8b9c-1462d70b8551}</Project>
       <Name>CarManager.Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\stapouster-carmanager - Web Deploy.pubxml" />
+    <Content Include="wwwroot\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\assets\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\assets\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\assets\locale\de.json" />
+    <Content Include="wwwroot\assets\locale\en.json" />
+    <Content Include="wwwroot\fontawesome-webfont.674f50d287a8c48dc19b.eot" />
+    <Content Include="wwwroot\fontawesome-webfont.af7ae505a9eed503f8b8.woff2" />
+    <Content Include="wwwroot\fontawesome-webfont.b06871f281fee6b241d6.ttf" />
+    <Content Include="wwwroot\fontawesome-webfont.fee66e712a8a08eef580.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

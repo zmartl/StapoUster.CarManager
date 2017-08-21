@@ -1,0 +1,114 @@
+﻿{
+  "actions": "Aktionen",
+  "additional": {
+    "activate": " aktivieren",
+    "add": " hinzufügen",
+    "and": " und ",
+    "at": " am ",
+    "create": " wurde erfolgreich erstellt.",
+    "deactivate": " deaktivieren",
+    "delete": " konnte erfolgreich gelöscht werden.",
+    "download": " herunterladen",
+    "edit": " bearbeiten",
+    "error": " hat ein Fehler",
+    "in": " in ",
+    "inUse": " ist in Verwendung und kann dadurch nicht gelöscht werden.",
+    "isRequired": " ist zwingend",
+    "moved": " wurde erfolgreich verschoben",
+    "mutate": " mutieren",
+    "or": " oder ",
+    "save": "  speichern",
+    "search": "Suchen Sie nach ",
+    "show": " Anzeigen",
+    "sync": " sync",
+    "synchronised": " wurden erfolgreich synchronisiert.",
+    "update": " wurde erfolgreich gespeichert.",
+    "with": " mit "
+  },
+  "admin": "Admin",
+  "author": {
+    "title": "Fahrzeugverwaltung",
+    "organisation": "Stadtpolizei Uster",
+    "unit": "Verwaltungspolizei"
+  },
+  "car": {
+    "description": "Beschreibung",
+    "one": "Fahrzeug",
+    "multiple": "Fahrzeuge",
+    "radio": "Funk"
+  },
+  "dashboard": "Dashboard",
+  "dialogs": {
+    "add": "Hinzufügen",
+    "back": "Zurück",
+    "backToList": "Zurück zur Liste",
+    "cancel": "Abbrechen",
+    "cancelled": {
+      "title": "Abgebrochen",
+      "text": "Das Löschen wurde abgebrochen und die Daten stehen Ihnen noch zur Verfügung"
+    },
+    "change": "Ändern",
+    "close": "Schliessen",
+    "copy": "Kopieren",
+    "delete": {
+      "name": "Löschen",
+      "title": "Sind Sie sicher?",
+      "text": "Möchten Sie diesen Eintrag wirklich löschen?"
+    },
+    "deleted": {
+      "title": "Gelöscht",
+      "text": "Der Eintrag wurde gelöscht!"
+    },
+    "details": "Details ansehen",
+    "edit": "Bearbeiten",
+    "next": "nächsten",
+    "new": "Neu",
+    "no": "Nein",
+    "noData": "Es wurden noch keine Daten erfasst",
+    "noResult": "Keine Daten gefunden!",
+    "noQueryResult": "Für diese Kombination wurde leider kein Eintrag gefunden",
+    "open": "Öffnen",
+    "previous": "letzten",
+    "remove": "Entfernen",
+    "save": "Speichern",
+    "unsavedChanges": {
+      "title": "Änderungen nicht gespeichert",
+      "text": "Sie haben nicht gespeicherte Änderungen. Möchten Sie wirklich ohne zu speichern weiterfahren?"
+    },
+    "wait": "Bitte warten...",
+    "yes": "Ja"
+  },
+  "error": "Fehler",
+  "errorResponse": {
+    "404Title": "404 Nicht gefunden",
+    "404Message": "Die gewünschte Seite konnte nicht gefunden werden.",
+    "401Title": "401 Nicht authorisiert",
+    "401Message": "Sie verfügen nicht über die notwendigen Berechtigungen um diese Seite aufzurufen."
+  },
+  "fields": {
+    "name": "Name"
+  },
+  "onDuty": "Im Einsatz",
+  "pages": {
+    "overview": "Übersicht"
+  },
+  "planning": {
+    "endDate": "Enddatum",
+    "one": "Planung",
+    "multiple": "Planungen",
+    "startDate": "Startdatum"
+  },
+  "pleaseSelect": "-- Bitte auswählen --",
+  "state": {
+    "one": "Status"
+  },
+  "statistic": {
+    "one": "Statistik",
+    "multiple": "Statistiken",
+    "startDate": "Startdatum",
+    "endDate": "Enddatum"
+  },
+  "startpage": "Startseite",
+  "success": "Erfolgreich",
+  "warning": "Warnung"
+}
