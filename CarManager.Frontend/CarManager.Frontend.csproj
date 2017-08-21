@@ -69,15 +69,12 @@
     <TypeScriptCompile Include="src\app\core\modules\search\search.box.component.ts" />
     <TypeScriptCompile Include="src\app\core\modules\search\search.module.ts" />
     <TypeScriptCompile Include="src\app\core\modules\search\search.pipe.ts" />
-    <TypeScriptCompile Include="src\app\core\modules\sort\orderBy.ts" />
-    <TypeScriptCompile Include="src\app\core\modules\sort\tableHeaderSortable.ts" />
     <TypeScriptCompile Include="src\app\core\modules\toggleIndicator\toggleIndicator.ts" />
     <TypeScriptCompile Include="src\app\core\modules\unsavedChangesDialog\unsavedChangesDialog.component.ts" />
     <TypeScriptCompile Include="src\app\core\services\common.service.ts" />
     <TypeScriptCompile Include="src\app\core\services\emitter.service.ts" />
     <TypeScriptCompile Include="src\app\core\services\errorHandler.service.ts" />
     <TypeScriptCompile Include="src\app\core\services\offCanvasToggler.service.ts" />
-    <TypeScriptCompile Include="src\app\core\validators\digitsValidator\neutral-digits.validator.ts" />
     <TypeScriptCompile Include="src\app\layout\components\header.ts" />
     <TypeScriptCompile Include="src\app\layout\components\nav.ts" />
     <TypeScriptCompile Include="src\app\car\components\car.add.menu.ts" />
@@ -86,7 +83,6 @@
     <TypeScriptCompile Include="src\app\car\components\car.list.ts" />
     <TypeScriptCompile Include="src\app\car\components\car.menu.ts" />
     <TypeScriptCompile Include="src\app\car\components\car.overview.ts" />
-    <TypeScriptCompile Include="src\app\car\pipes\car.search.pipe.ts" />
     <TypeScriptCompile Include="src\app\car\car.module.ts" />
     <TypeScriptCompile Include="src\app\car\car.routes.ts" />
     <TypeScriptCompile Include="src\app\shared\models\statistic.model.ts" />
@@ -102,7 +98,6 @@
     <TypeScriptCompile Include="src\app\statistic\components\statistic.list.ts" />
     <TypeScriptCompile Include="src\app\statistic\components\statistic.menu.ts" />
     <TypeScriptCompile Include="src\app\statistic\components\statistic.overview.ts" />
-    <TypeScriptCompile Include="src\app\statistic\pipes\statistic.search.pipe.ts" />
     <TypeScriptCompile Include="src\app\statistic\statistic.module.ts" />
     <TypeScriptCompile Include="src\app\statistic\statistic.routes.ts" />
     <TypeScriptCompile Include="src\app\planning\components\planning.edit.ts" />
@@ -117,7 +112,6 @@
     <TypeScriptCompile Include="src\app\planning\components\planning.list.ts" />
     <TypeScriptCompile Include="src\app\planning\components\planning.menu.ts" />
     <TypeScriptCompile Include="src\app\planning\components\planning.overview.ts" />
-    <TypeScriptCompile Include="src\app\planning\pipes\planning.search.pipe.ts" />
     <TypeScriptCompile Include="src\app\planning\planning.module.ts" />
     <TypeScriptCompile Include="src\app\planning\planning.routes.ts" />
     <TypeScriptCompile Include="src\app\state\components\state.add.menu.ts" />
@@ -129,7 +123,6 @@
     <TypeScriptCompile Include="src\app\state\state.module.ts" />
     <TypeScriptCompile Include="src\app\state\state.routes.ts" />
     <TypeScriptCompile Include="src\app\state\models\state.search.model.ts" />
-    <TypeScriptCompile Include="src\app\state\pipes\state.search.pipe.ts" />
     <TypeScriptCompile Include="src\app\shared\models\state.model.ts" />
     <TypeScriptCompile Include="src\app\shared\services\state.service.ts" />
     <TypeScriptCompile Include="src\app\shared\settings\appConfig.interface.ts" />
@@ -186,7 +179,6 @@
     <Content Include="src\app\core\modules\not-found\404.html" />
     <Content Include="src\app\core\modules\save-menu\save-menu.component.html" />
     <Content Include="src\app\core\modules\search\search.box.component.html" />
-    <Content Include="src\app\core\modules\sort\tableHeaderSortable.html" />
     <Content Include="src\app\core\modules\toggleIndicator\toggleIndicator.html" />
     <Content Include="src\app\core\modules\unsavedChangesDialog\unsavedChangesDialog.component.html" />
     <Content Include="src\app\layout\templates\app.html" />
