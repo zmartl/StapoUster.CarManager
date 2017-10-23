@@ -1,0 +1,5 @@
+C:\Development\StapoUsterCarManager\CarManager.Frontend\bin\Release\CarManager.Frontend.dll
+C:\Development\StapoUsterCarManager\CarManager.Frontend\bin\Release\CarManager.Frontend.pdb
+C:\Development\StapoUsterCarManager\CarManager.Frontend\obj\Release\CarManager.Frontend.csprojResolveAssemblyReference.cache
+C:\Development\StapoUsterCarManager\CarManager.Frontend\obj\Release\CarManager.Frontend.dll
+C:\Development\StapoUsterCarManager\CarManager.Frontend\obj\Release\CarManager.Frontend.pdb

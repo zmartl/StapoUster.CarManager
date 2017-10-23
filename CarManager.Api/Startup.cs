@@ -1,4 +1,6 @@
 ﻿
+using System.Web.Http;
+using CarManager.Api;
 using CarManager.Api.App_Start;
 using CarManager.Shared.AutomatedMappings;
 using Microsoft.Owin;
@@ -6,7 +8,8 @@ using Microsoft.Owin.FileSystems;
 using Microsoft.Owin.StaticFiles;
 using Microsoft.Practices.Unity.WebApi;
 using Owin;
-using System.Web.Http;
+
+[assembly: OwinStartup(typeof(Startup))]
 
 namespace CarManager.Api
 {

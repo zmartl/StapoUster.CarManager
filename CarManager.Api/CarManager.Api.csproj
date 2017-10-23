@@ -70,11 +70,11 @@
     <Reference Include="Microsoft.Owin.FileSystems, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.FileSystems.3.1.0\lib\net45\Microsoft.Owin.FileSystems.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.StaticFiles, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.1.0\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
+    <Reference Include="Microsoft.Owin.StaticFiles, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.0.1\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -212,14 +212,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="wwwroot\3rdpartylicenses.txt" />
     <Content Include="wwwroot\assets\favicon.ico" />
     <Content Include="wwwroot\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
@@ -229,12 +230,12 @@
     <Content Include="wwwroot\favicon.ico" />
     <Content Include="wwwroot\fontawesome-webfont.912ec66d7572ff821749.svg" />
     <Content Include="wwwroot\index.html" />
-    <Content Include="wwwroot\inline.ef49ec49e1bd4b90d2e1.bundle.js" />
-    <Content Include="wwwroot\main.5ec4be32a348a7effe24.bundle.js" />
-    <Content Include="wwwroot\polyfills.c7f2b30f4d8ff16ddd31.bundle.js" />
-    <Content Include="wwwroot\scripts.2b0e8596aefcae296350.bundle.js" />
-    <Content Include="wwwroot\styles.7b96d4fa0c30288cd934.bundle.css" />
-    <Content Include="wwwroot\vendor.6f4dcc4c336993e33caf.bundle.js" />
+    <Content Include="wwwroot\inline.bundle.js" />
+    <Content Include="wwwroot\main.bundle.js" />
+    <Content Include="wwwroot\polyfills.bundle.js" />
+    <Content Include="wwwroot\scripts.bundle.js" />
+    <Content Include="wwwroot\styles.bundle.js" />
+    <Content Include="wwwroot\vendor.bundle.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +283,12 @@
     <Content Include="wwwroot\fontawesome-webfont.af7ae505a9eed503f8b8.woff2" />
     <Content Include="wwwroot\fontawesome-webfont.b06871f281fee6b241d6.ttf" />
     <Content Include="wwwroot\fontawesome-webfont.fee66e712a8a08eef580.woff" />
+    <Content Include="wwwroot\inline.bundle.js.map" />
+    <Content Include="wwwroot\main.bundle.js.map" />
+    <Content Include="wwwroot\polyfills.bundle.js.map" />
+    <Content Include="wwwroot\scripts.bundle.js.map" />
+    <Content Include="wwwroot\styles.bundle.js.map" />
+    <Content Include="wwwroot\vendor.bundle.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
